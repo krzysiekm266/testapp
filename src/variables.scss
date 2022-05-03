@@ -1,0 +1,25 @@
+/********************Colors********************************/
+$bg-color:  cornflowerblue;
+$task-details-bg-color:$bg-color;
+
+$task-list-bg-color:white;
+$task-list-title-bg-color:darken($bg-color,20%);
+
+$task-incomplete-bg-color: rgb(233, 117, 117);
+$task-complete-bg-color: rgb(162, 241, 162);
+
+$task-button-details-bg-color:darken($bg-color,1%);
+
+$task-complete-label-bg-color: darken($task-complete-bg-color,10%) ;
+$task-incomplete-label-bg-color: darken($task-incomplete-bg-color,10%);
+/******************Sizes******************************/;
+$task-button-width: 100px;
+$task-button-height: 40px;
+$task-button-details-width:auto;
+$task-button-details-height:auto;
+
+$task-complete-label-width: 100px;
+$task-complete-label-height: 40px;
+$task-incomplete-label-width: 100px;
+$task-incomplete-label-height: 40px;
+

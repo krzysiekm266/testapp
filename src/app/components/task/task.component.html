@@ -1,0 +1,25 @@
+<div class="container" [ngClass]=" task.status ? 'task-completed':'' ">
+  <div class="task-status"  >
+    <label *ngIf="!task.status"  class="incomplete-label" [ngClass]="detailsHidden ? ' ' : 'task-details-toggled'">Incomplete</label>
+  </div>
+  <div class="task-title">
+    <div class="task-title" (click)="toggleTaskDetails()">
+      <h3 class="task-title">{{ task.name | titlecase}}</h3>
+      <!-- <button  class="details-button"  (click)="toggleTaskDetails()">{{ detailsHidden ? 'details...' : 'hide details...' }}</button> -->
+    </div>
+  </div>
+  <div class="task-menu">
+    <input  *ngIf="!task.status" class="checkbox" type="checkbox" (input)="toggleCompleteButton()" [disabled]="checkBoxDisabled"  />
+    <button class="complete-button" *ngIf="!task.status" (click)="completeTask()" [disabled]="buttonDisabled">Complete</button>
+    <label *ngIf="task.status"  class="complete-label" >Completed</label>
+
+  </div>
+
+</div>
+<div *ngIf="!detailsHidden" class="task-details">
+  <div class="task-details-arrow-left"></div>
+  <div class="task-details-arrow-right"></div>
+  <p > <span>Create at: </span> {{ task.create_at | date:'medium' }} </p>
+  <p > <span>Complete at: </span> {{ task.complete_at | date:'medium' }} </p>
+</div>
+
