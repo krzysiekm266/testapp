@@ -27,9 +27,11 @@ export class TaskComponent implements OnInit {
 
   completeTask() {
     this.task.status = true;
+    this.task.complete_at = new Date();
+
     this.buttonDisabled = true;
     this.checkBoxDisabled = true;
-    this.task.complete_at = new Date();
+
   }
 
 }

@@ -1,5 +1,5 @@
 import { TaskService } from './../../services/task.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Task } from "../../interfaces/task";
 import { TASKS } from '../../interfaces/task';
 
@@ -10,11 +10,20 @@ import { TASKS } from '../../interfaces/task';
   providers:[TaskService]
 })
 export class TaskListComponent implements OnInit {
-  tasks:Task[] = TASKS;
-
+  tasks:Task[] = [];
+  @Input() task:Task = {name:'',status:false};
+  showTaskEditor:boolean = false;
   constructor(private http:TaskService) { }
 
   ngOnInit(): void {
+    this.tasks = TASKS;
   }
+  toggleTaskEditor() {
+    this.showTaskEditor = !this.showTaskEditor;
+  }
+  addNewTask(task:Task) {
+   this.task = task;
+   this.tasks.push(this.task);
 
+  }
 }

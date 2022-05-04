@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
+import { TaskEditorComponent } from './components/task-editor/task-editor.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { TaskListComponent } from './components/task-list/task-list.component';
     AppComponent,
     TaskComponent,
     TaskListComponent,
+    TaskEditorComponent,
 
 
   ],

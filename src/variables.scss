@@ -1,12 +1,15 @@
 /********************Colors********************************/
 $bg-color:  cornflowerblue;
-$task-details-bg-color:$bg-color;
+$task-details-bg-color:lighten($bg-color,20%);
 
 $task-list-bg-color:white;
-$task-list-title-bg-color:darken($bg-color,20%);
+$task-list-title-bg-color:darken($bg-color,15%);
 
-$task-incomplete-bg-color: rgb(233, 117, 117);
-$task-complete-bg-color: rgb(162, 241, 162);
+
+$task-incomplete-bg-color: rgb(224, 75, 75);
+$task-complete-bg-color: rgb(109, 233, 71);
+
+$task-complete-button-bg-color:rgb(222, 245, 14);
 
 $task-button-details-bg-color:darken($bg-color,1%);
 
